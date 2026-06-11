@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, BrainCircuit, Target, CheckCircle, Zap, LayoutDashboard, CheckSquare, Activity, Loader2, TrendingUp } from 'lucide-react';
+import { ArrowRight, BrainCircuit, Target, CheckCircle, Zap, LayoutDashboard, CheckSquare, Activity, Loader2, TrendingUp, Heart } from 'lucide-react';
 import Card from '../components/ui/Card';
 import { useAuthStore } from '../store/useAuthStore';
 
@@ -243,14 +243,23 @@ const Landing = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-surface py-12 text-center text-textSecondary">
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <div className="w-6 h-6 rounded flex items-center justify-center bg-primary/10">
+      <footer className="border-t border-border bg-surface py-16 text-center text-textSecondary flex flex-col items-center justify-center">
+        <div className="flex items-center justify-center gap-2 mb-8">
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-gradient-to-tr from-primary/20 to-secondary/20 border border-primary/10">
             <Zap className="w-4 h-4 text-primary" />
           </div>
-          <span className="text-lg font-bold text-textPrimary tracking-tight">Actify</span>
+          <span className="text-xl font-bold text-textPrimary tracking-tight">Actify</span>
         </div>
-        <p className="text-sm">© {new Date().getFullYear()} Actify Productivity Platform. All rights reserved.</p>
+        
+        <div className="flex flex-col items-center gap-4">
+          <div className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-background border border-border shadow-sm hover:shadow-md transition-shadow">
+            <span className="text-sm font-medium text-textSecondary">Made with</span>
+            <Heart className="w-4 h-4 text-danger fill-danger/20 animate-pulse" />
+            <span className="text-sm font-medium text-textSecondary">by</span>
+            <span className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary tracking-wide">Mayur Patel</span>
+          </div>
+          <p className="text-xs text-textSecondary/60 mt-2">© {new Date().getFullYear()} Actify Productivity Platform. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
