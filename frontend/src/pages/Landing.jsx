@@ -85,9 +85,9 @@ const Landing = () => {
           transition={{ duration: 1 }}
           className="max-w-6xl mx-auto rounded-xl border border-border bg-surface/50 p-2 md:p-3 backdrop-blur-xl shadow-2xl shadow-primary/5 overflow-hidden"
         >
-          <div className="aspect-[16/9] w-full rounded-lg bg-background border border-border flex flex-col overflow-hidden relative shadow-inner">
+          <div className="aspect-[4/3] md:aspect-[16/9] w-full rounded-lg bg-background border border-border flex flex-col overflow-hidden relative shadow-inner">
             {/* Window Header */}
-            <div className="h-10 w-full border-b border-border bg-surface flex items-center px-4">
+            <div className="h-10 w-full border-b border-border bg-surface flex items-center px-4 shrink-0">
               <div className="flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-danger/80"/>
                 <div className="w-3 h-3 rounded-full bg-warning/80"/>
@@ -95,9 +95,9 @@ const Landing = () => {
               </div>
             </div>
             {/* Dashboard Abstract Representation */}
-            <div className="flex flex-1 overflow-hidden p-6 gap-6 bg-grid-white/[0.02]">
+            <div className="flex flex-1 overflow-hidden p-4 md:p-6 gap-4 md:gap-6 bg-grid-white/[0.02]">
               {/* Sidebar Mock */}
-              <div className="w-48 hidden md:flex flex-col gap-3 border-r border-border pr-6">
+              <div className="w-48 hidden md:flex flex-col gap-3 border-r border-border pr-6 shrink-0">
                 <div className="h-10 w-full bg-surface/80 rounded-lg flex items-center px-3 gap-3 border border-border/50 text-primary">
                   <LayoutDashboard className="w-4 h-4" />
                   <div className="h-3 w-16 bg-primary/30 rounded" />
@@ -112,43 +112,43 @@ const Landing = () => {
                 </div>
               </div>
               {/* Main Content Mock */}
-              <div className="flex-1 flex flex-col gap-6">
+              <div className="flex-1 flex flex-col gap-4 md:gap-6 overflow-hidden overflow-y-auto pb-4 md:pb-0">
                 {/* Top Widgets */}
-                <div className="grid grid-cols-4 gap-4 h-24">
-                  <div className="bg-surface rounded-xl border border-border p-4 flex flex-col justify-between">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 shrink-0">
+                  <div className="bg-surface rounded-xl border border-border p-3 md:p-4 flex flex-col justify-between min-h-[5rem]">
                     <div className="flex justify-between items-center">
-                      <div className="h-2 w-16 bg-textSecondary/40 rounded" />
+                      <div className="h-2 w-10 md:w-16 bg-textSecondary/40 rounded" />
                       <TrendingUp className="w-4 h-4 text-primary" />
                     </div>
-                    <div className="text-xl font-bold">85%</div>
+                    <div className="text-lg md:text-xl font-bold">85%</div>
                   </div>
-                  <div className="bg-surface rounded-xl border border-border p-4 flex flex-col justify-between">
+                  <div className="bg-surface rounded-xl border border-border p-3 md:p-4 flex flex-col justify-between min-h-[5rem]">
                     <div className="flex justify-between items-center">
-                      <div className="h-2 w-16 bg-textSecondary/40 rounded" />
+                      <div className="h-2 w-10 md:w-16 bg-textSecondary/40 rounded" />
                       <Target className="w-4 h-4 text-success" />
                     </div>
-                    <div className="text-xl font-bold">92%</div>
+                    <div className="text-lg md:text-xl font-bold">92%</div>
                   </div>
-                  <div className="bg-surface rounded-xl border border-border p-4 flex flex-col justify-between">
+                  <div className="bg-surface rounded-xl border border-border p-3 md:p-4 flex flex-col justify-between min-h-[5rem]">
                     <div className="flex justify-between items-center">
-                      <div className="h-2 w-16 bg-textSecondary/40 rounded" />
+                      <div className="h-2 w-10 md:w-16 bg-textSecondary/40 rounded" />
                       <Zap className="w-4 h-4 text-warning" />
                     </div>
-                    <div className="text-xl font-bold">78%</div>
+                    <div className="text-lg md:text-xl font-bold">78%</div>
                   </div>
-                  <div className="bg-surface rounded-xl border border-border p-4 flex flex-col justify-between">
+                  <div className="bg-surface rounded-xl border border-border p-3 md:p-4 flex flex-col justify-between min-h-[5rem]">
                     <div className="flex justify-between items-center">
-                      <div className="h-2 w-16 bg-textSecondary/40 rounded" />
+                      <div className="h-2 w-10 md:w-16 bg-textSecondary/40 rounded" />
                       <CheckCircle className="w-4 h-4 text-secondary" />
                     </div>
-                    <div className="text-xl font-bold">12</div>
+                    <div className="text-lg md:text-xl font-bold">12</div>
                   </div>
                 </div>
                 {/* Big Chart & List */}
-                <div className="flex-1 flex gap-6">
-                  <div className="flex-[2] bg-gradient-to-br from-surface to-background rounded-xl border border-border relative overflow-hidden p-5 flex flex-col">
-                    <div className="h-3 w-32 bg-textSecondary/40 rounded mb-6" />
-                    <div className="flex-1 border-b border-l border-border/50 relative flex items-end px-4 gap-2">
+                <div className="flex-1 flex flex-col md:flex-row gap-4 md:gap-6 min-h-[200px]">
+                  <div className="flex-[2] bg-gradient-to-br from-surface to-background rounded-xl border border-border relative overflow-hidden p-4 md:p-5 flex flex-col min-h-[150px]">
+                    <div className="h-3 w-24 md:w-32 bg-textSecondary/40 rounded mb-4 md:mb-6" />
+                    <div className="flex-1 border-b border-l border-border/50 relative flex items-end px-2 md:px-4 gap-1 md:gap-2">
                       <div className="w-1/6 h-[30%] bg-primary/20 rounded-t border-t border-primary/50" />
                       <div className="w-1/6 h-[50%] bg-primary/30 rounded-t border-t border-primary/60" />
                       <div className="w-1/6 h-[80%] bg-primary/50 rounded-t border-t border-primary/80" />
@@ -157,21 +157,21 @@ const Landing = () => {
                       <div className="absolute bottom-0 w-full h-full bg-gradient-to-t from-primary/5 to-transparent pointer-events-none" />
                     </div>
                   </div>
-                  <div className="flex-1 bg-surface rounded-xl border border-border flex flex-col p-5 gap-4">
-                    <div className="h-3 w-24 bg-textSecondary/40 rounded mb-2" />
-                    <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border">
-                      <div className="w-4 h-4 rounded-full border-2 border-textSecondary/50" />
-                      <div className="h-2 w-20 bg-textPrimary/70 rounded" />
+                  <div className="flex-1 bg-surface rounded-xl border border-border flex flex-col p-4 md:p-5 gap-3 md:gap-4 shrink-0">
+                    <div className="h-3 w-20 md:w-24 bg-textSecondary/40 rounded mb-1 md:mb-2" />
+                    <div className="flex items-center gap-2 md:gap-3 p-2 md:p-3 bg-background rounded-lg border border-border">
+                      <div className="w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-textSecondary/50 shrink-0" />
+                      <div className="h-2 w-16 md:w-20 bg-textPrimary/70 rounded" />
                     </div>
-                    <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border">
-                      <div className="w-4 h-4 rounded-full bg-success flex items-center justify-center">
-                        <CheckCircle className="w-3 h-3 text-white" />
+                    <div className="flex items-center gap-2 md:gap-3 p-2 md:p-3 bg-background rounded-lg border border-border">
+                      <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-success flex items-center justify-center shrink-0">
+                        <CheckCircle className="w-2 h-2 md:w-3 md:h-3 text-white" />
                       </div>
-                      <div className="h-2 w-24 bg-textSecondary/50 rounded line-through" />
+                      <div className="h-2 w-20 md:w-24 bg-textSecondary/50 rounded line-through" />
                     </div>
-                    <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border">
-                      <div className="w-4 h-4 rounded-full border-2 border-textSecondary/50" />
-                      <div className="h-2 w-16 bg-textPrimary/70 rounded" />
+                    <div className="flex items-center gap-2 md:gap-3 p-2 md:p-3 bg-background rounded-lg border border-border">
+                      <div className="w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-textSecondary/50 shrink-0" />
+                      <div className="h-2 w-12 md:w-16 bg-textPrimary/70 rounded" />
                     </div>
                   </div>
                 </div>
